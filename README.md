@@ -30,12 +30,12 @@ Upload your CellRanger `.h5` output, explore six QC metrics interactively, and l
 
 | Tab | Metric | Description |
 |-----|--------|-------------|
-| 📊 Cell Counts | Cells per sample | Total cells detected per sample after CellRanger filtering |
-| 📈 UMI Distribution | nUMI per cell | Number of transcripts captured; low counts suggest empty droplets |
-| 🧬 Genes per Cell | nGene per cell | Unique genes detected; very high counts may indicate doublets |
-| 🔵 UMIs vs Genes | nUMI × nGene scatter | Linear relationship expected; outliers suggest low quality |
-| 🟢 Mitochondrial Ratio | mitoRatio | High mito content (>20%) indicates dying or damaged cells |
-| ⭐ Complexity | log10(Genes/UMI) | Transcriptome complexity; low novelty score suggests poor quality |
+| Cell Counts | Cells per sample | Total cells detected per sample after CellRanger filtering |
+| UMI Distribution | nUMI per cell | Number of transcripts captured; low counts suggest empty droplets |
+| Genes per Cell | nGene per cell | Unique genes detected; very high counts may indicate doublets |
+| UMIs vs Genes | nUMI × nGene scatter | Linear relationship expected; outliers suggest low quality |
+| Mitochondrial Ratio | mitoRatio | High mito content (>20%) indicates dying or damaged cells |
+| Complexity | log10(Genes/UMI) | Transcriptome complexity; low novelty score suggests poor quality |
 
 ---
 
