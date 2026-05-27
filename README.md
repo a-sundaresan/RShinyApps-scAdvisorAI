@@ -148,6 +148,13 @@ Defaults follow published single-cell QC best practices and can be adjusted via 
 
 ## Project Structure
 
+```
+RShinyApps-scAdvisorAI/
+├── app.R           # Full Shiny application
+├── config.json     # API key — local only, NOT committed (add to .gitignore)
+├── .gitignore      # Excludes config.json
+└── README.md
+​```
 ---
 
 ## Related Projects
