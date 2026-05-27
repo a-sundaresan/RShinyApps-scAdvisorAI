@@ -33,7 +33,7 @@ Upload your CellRanger `.h5` output, explore six QC metrics interactively, and l
 | Cell Counts | Cells per sample | Total cells detected per sample after CellRanger filtering |
 | UMI Distribution | nUMI per cell | Number of transcripts captured; low counts suggest empty droplets |
 | Genes per Cell | nGene per cell | Unique genes detected; very high counts may indicate doublets |
-| UMIs vs Genes | nUMI × nGene scatter | Linear relationship expected; outliers suggest low quality |
+| UMIs vs Genes | nUMI x nGene scatter | Linear relationship expected; outliers suggest low quality |
 | Mitochondrial Ratio | mitoRatio | High mito content (>20%) indicates dying or damaged cells |
 | Complexity | log10(Genes/UMI) | Transcriptome complexity; low novelty score suggests poor quality |
 
@@ -46,7 +46,7 @@ Clicking **Get AI Recommendations** sends your QC summary statistics to Claude S
 1. **Recommended thresholds** — `min_nUMI`, `min_nGene`, `max_mitoRatio`, `min_novelty_score`
 2. **Reasoning** — data-driven explanation for each threshold
 3. **Quality flags** — any concerns about the data quality
-4. **Methods text** — a ready-to-use 2–3 sentence QC description for your Methods section
+4. **Methods text** — a ready-to-use 2-3 sentence QC description for your Methods section
 
 Recommendations are applied automatically to the sliders. You can accept, adjust, or override them before downloading.
 
@@ -74,12 +74,14 @@ BiocManager::install(c("Seurat", "hdf5r"))
 ### Local
 
 1. Clone the repo:
+
 ```bash
 git clone https://github.com/a-sundaresan/RShinyApps-scAdvisorAI.git
 cd RShinyApps-scAdvisorAI
 ```
 
 2. Create `config.json` with your Anthropic API key:
+
 ```json
 {
   "ANTHROPIC_API_KEY": "sk-ant-your-key-here"
@@ -87,11 +89,13 @@ cd RShinyApps-scAdvisorAI
 ```
 
 3. Add `config.json` to `.gitignore`:
+
 ```bash
 echo "config.json" >> .gitignore
 ```
 
 4. Run the app:
+
 ```r
 shiny::runApp("app.R")
 ```
@@ -100,7 +104,7 @@ shiny::runApp("app.R")
 
 Set your API key as an environment variable in the shinyapps.io dashboard:
 
-**App → Settings → Environment Variables → `ANTHROPIC_API_KEY`**
+**App -> Settings -> Environment Variables -> `ANTHROPIC_API_KEY`**
 
 The app automatically detects whether to read from `config.json` (local) or the environment variable (deployed).
 
@@ -148,13 +152,12 @@ Defaults follow published single-cell QC best practices and can be adjusted via 
 
 ## Project Structure
 
-```
-RShinyApps-scAdvisorAI/
-├── app.R           # Full Shiny application
-├── config.json     # API key — local only, NOT committed (add to .gitignore)
-├── .gitignore      # Excludes config.json
-└── README.md
-​```
+    RShinyApps-scAdvisorAI/
+    ├── app.R           # Full Shiny application
+    ├── config.json     # API key — local only, NOT committed (add to .gitignore)
+    ├── .gitignore      # Excludes config.json
+    └── README.md
+
 ---
 
 ## Related Projects
