@@ -5,12 +5,15 @@
 ![AI](https://img.shields.io/badge/AI-Anthropic%20Claude-orange?style=flat-square)
 ![Input](https://img.shields.io/badge/Input-10X%20CellRanger-lightgrey?style=flat-square)
 ![Analysis](https://img.shields.io/badge/Analysis-scRNA--seq%20QC-green?style=flat-square)
+![Live App](https://img.shields.io/badge/Live%20App-shinyapps.io-brightgreen?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 An AI-powered interactive quality control advisor for 10X Genomics single-cell RNA-seq data, built with R Shiny and the Anthropic Claude API.
 
 Upload your CellRanger `.h5` output, explore six QC metrics interactively, and let Claude analyze your data distributions to recommend optimal filtering thresholds — all from a single browser interface.
+
+🚀 **[Try the live app](https://a-sundaresan.shinyapps.io/scAdvisorAI/)**
 
 ---
 
@@ -70,6 +73,10 @@ BiocManager::install(c("Seurat", "hdf5r"))
 ---
 
 ## Usage
+
+### Live App
+
+Try it directly at **[https://a-sundaresan.shinyapps.io/scAdvisorAI/](https://a-sundaresan.shinyapps.io/scAdvisorAI/)** — no installation needed.
 
 ### Local
 
